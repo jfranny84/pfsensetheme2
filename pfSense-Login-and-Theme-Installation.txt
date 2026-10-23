@@ -1,0 +1,185 @@
+pfSense-Blue-Silver-Orange-Neon — INSTALLATION GUIDE
+Neon Blue, Neon Green & Neon Orange
+
+Copyright © 2026 pfSense-Blue-Silver-Orange-Neon — Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.
+Attribution covers the custom design modifications, not pfSense software
+or the underlying pfSense logo artwork.
+
+1. UPDATE PFSENSE BEFORE INSTALLING
+
+Recommended: update to the current stable release supported for your pfSense
+edition and hardware BEFORE installing these custom files. Use System >
+Update and follow Netgate's upgrade instructions for your installation.
+Back up first, complete the update/reboot, and confirm normal operation.
+
+Installing the theme AFTER the update avoids having that update immediately
+replace your customization. It does NOT prevent future upgrades, repairs,
+or reinstalls from overwriting custom files. Keep this package on your PC
+and check/reapply compatible custom files after later upgrades.
+Do not make system files immutable or block updates to preserve the theme.
+
+2. BACK UP THE ORIGINAL FILES
+
+Download a configuration backup from Diagnostics > Backup & Restore.
+Also copy the original login.css and logo files to your PC separately.
+A normal configuration XML backup does not include custom system files.
+Record the currently selected theme and the original logo paths.
+
+This package targets the classic Bootstrap-based pfSense WebGUI.
+It has not been verified on your firewall or against every pfSense release.
+
+3. PACKAGE FILES AND DESTINATIONS
+
+Included file: pfSense-Blue-Silver-Orange-Neon.css
+Destination: /usr/local/www/css/pfSense-Blue-Silver-Orange-Neon.css
+
+Included file: login.css
+Destination: /usr/local/www/css/login.css
+
+Included file: logo.svg
+Destination: the existing SVG asset actually used by your installed version.
+Confirm its exact location before replacing it (see step 6).
+
+The filenames above are the install-ready names in this package. Do not use
+browser download suffixes such as (3) or (4) on the destination filenames.
+
+4. TRANSFER THE FILES
+
+Use an authenticated file-transfer method supported by your firewall,
+such as an SCP-capable client with SSH access enabled for a permitted
+administrator on the trusted management network.
+
+In a file-transfer client, browse to /usr/local/www/css/ and upload the
+included theme CSS. Back up the existing login.css before replacing it.
+Preserve the ownership and readable file permissions used by the existing
+web files. Do not give files world-write permissions.
+
+IMPORTANT: the theme imports the original pfSense.css. Keep the stock
+/usr/local/www/css/pfSense.css intact. Do not rename this theme to pfSense.css.
+No firewall rules or network configuration need to be changed for the theme.
+
+5. SELECT THE THEME
+
+Open System > General Setup and find the webConfigurator Theme setting.
+Select pfSense-Blue-Silver-Orange-Neon (the label may appear with spaces), then
+save. If your user account has a theme override, select the same theme in
+that user's preferences or remove the override.
+
+If the uploaded theme is not listed, check the filename and file location.
+Your release may handle theme discovery differently; do not overwrite the
+stock stylesheet or edit PHP files as a workaround without checking that
+release's behavior.
+
+Hard-refresh your browser (Ctrl+F5 on Windows) to load the new CSS.
+
+6. INSTALL THE MATCHING LOGO
+
+The logo asset name and location can differ by release and edition.
+Use your browser's developer tools to inspect the logo or the page source.
+Check the referenced SVG or the SVG loaded inline by the page. The installed
+/css/logo.css may also help locate the asset, but is not always its source.
+
+Identify that asset under /usr/local/www/, download a backup, and replace
+only that confirmed SVG with the included logo.svg. Use the original asset's
+filename at its destination. Uploading logo.svg to an arbitrary directory
+will not automatically make pfSense use it.
+
+If the login page and WebGUI reference different SVG assets, back up each
+and install the recolored logo at each confirmed location. Keep the original
+logo geometry; this file provides the matching color treatment.
+
+7. CHECK THE LOGIN PAGE AND COPYRIGHT
+
+Open a private/incognito browser window to view the login page while keeping
+your existing administrator session open. Confirm that the username and
+password fields, login button, logo, and footer appear correctly.
+
+Check dashboard widgets, navigation menus, tabs, tables, forms, and narrow
+browser windows. No reboot is normally needed for CSS or SVG changes.
+
+The CSS files display a Neon Blue, Green & Orange design credit and copyright in their existing footer:
+Custom theme design by Josh Frandsen / RestoreMyPC.Net.
+Copyright © 2026 pfSense-Blue-Silver-Orange-Neon — Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.
+
+The logo includes the same credit as SVG metadata and a source comment.
+The original pfSense artwork and any upstream notices remain separate.
+
+8. RESTORE THE ORIGINAL LOOK
+
+Select the original theme in System > General Setup and restore any user
+theme preference. Restore your backed-up login.css and the original SVG
+assets, then hard-refresh the browser. If the WebGUI cannot be used, restore
+those files through your permitted management file-transfer/console access.
+
+9. AFTER FUTURE UPDATES
+
+Confirm the stock interface works after updating. Check the theme, login,
+and logo before reapplying these files. If the WebGUI layout or asset paths
+changed, adapt the custom files to the new version first.
+Keep both the original backups and this install package off the firewall.
+
+OFFICIAL REFERENCE DOCUMENTATION
+https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide.html
+https://docs.netgate.com/pfsense/en/latest/install/upgrade-guide-prepare.html
+https://docs.netgate.com/pfsense/en/latest/backup/index.html
+
+10. NEON EDITION / DONATIONS
+
+Version 2.3, October 2026. Theme name: pfSense-Blue-Silver-Orange-Neon.
+Upload pfSense-Blue-Silver-Orange-Neon.css and select the new theme name.
+When upgrading from the previous name, select the new theme before removing
+the old custom CSS. Keep the original stock pfSense.css intact.
+Palette: neon blue #00C8FF, neon green #63FF5B, neon orange #FF9638,
+with a dark navy background and subtle ambient color. Links and controls
+light up on hover and keyboard focus; reduced-motion preferences disable
+transitions. Wrench icons are blue, minus-circle icons green, and
+times-circle icons orange. Both .fa-time-circle (requested spelling) and
+.fa-times-circle are styled; the former does not create a missing FA glyph.
+The original SVG geometry is preserved with matching neon gradients/glow.
+Copyright is included at the top of both CSS files and in SVG metadata.
+
+Support this custom theme:
+PayPal: https://paypal.me/jfranny1984
+Venmo: https://venmo.com/u/jfranny84
+
+CLICKABLE DONATION LINKS IN THE WEBGUI AND LOGIN FOOTERS
+CSS cannot create real hyperlinks. To show clickable links on the firewall,
+insert the following HTML ONCE inside the existing WebGUI footer element,
+and ONCE inside the login page's existing #footertext element. The CSS
+already styles this block. Keep the existing pfSense copyright/notices.
+
+<div class="theme-donate" aria-label="Support the theme designer">
+  <span>Support this theme</span>
+  <a href="https://paypal.me/jfranny1984" target="_blank" rel="noopener noreferrer">Donate via PayPal</a>
+  <a href="https://venmo.com/u/jfranny84" target="_blank" rel="noopener noreferrer">Donate via Venmo</a>
+</div>
+
+Locate the templates actually used by your installed release before editing;
+paths vary. Back up the templates separately and insert only the static HTML
+within the rendered footer, outside any PHP block. Do not paste it into CSS
+or SVG, or replace an entire template. Template edits are optional and may
+be overwritten by updates. The four supplied files do not automatically
+modify PHP or install those footer anchors.
+
+VERIFY AFTER INSTALLATION
+Check link/button contrast, dropdowns, tab states, dashboard controls,
+status notices, long tables and package pages. Test the login page at a
+narrow width and short window height and confirm the footer does not cover
+inputs. Confirm both donation links open the intended profiles if installed.
+This edition has not been tested on a live firewall. Reapply only after
+checking compatibility with the installed pfSense release.
+
+LOGO HOVER EFFECT
+The logo brightens with a blue/green halo on hover. Matching theme/login CSS
+handles inline SVG and SVG loaded as an image; the SVG includes its own hover
+style for direct viewing and inline/object embedding. Image embedding does
+not run the SVG's internal hover rules, so install the matching CSS too.
+Keyboard focus on a wrapping logo link produces the same glow. Reduced-motion
+preferences disable transitions. The transparent top menu, centered desktop
+navigation, brighter surfaces and neon sortable-table styling are retained.
+
+
+VERSION 2.3
+The login uses the exact WebGUI circuit backdrop and transparent content
+regions. Menu hover/focus/open states retain identical border widths and font
+weight. Desktop dropdowns overlay content instead of changing page height.

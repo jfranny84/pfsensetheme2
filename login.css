@@ -1,0 +1,622 @@
+/* pfSense-Blue-Silver-Orange-Neon | 2.3 | October 2026
+ * Copyright © 2026 pfSense-Blue-Silver-Orange-Neon — Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.
+ * Attribution covers custom design modifications only; upstream rights remain with their owners.
+ * Donate: https://paypal.me/jfranny1984 | https://venmo.com/u/jfranny84
+ * Keep the stock pfSense.css intact. See the included installation guide.
+ */
+
+/* Consolidated rules retain cascade order and responsive overrides. */
+@import url("/css/logo.css");
+body {
+  height: 100%;
+  padding: 0;
+}
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100%;
+}
+#headerrow {
+  position: fixed;
+  height: 90px;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+.pagebody {
+  position: absolute;
+  top: 90px;
+  width: 100%;
+}
+.pagebodywarn {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+}
+.nowarning {
+  height: 80px;
+  padding-top: 10px;
+}
+#hostspan {
+  text-align: right;
+}
+.msgbox {
+  padding-right: 60px;
+  padding-top: 25px;
+}
+@media only screen and (max-width : 768px) {
+  #headerrow {
+    height: 100px;
+  }
+  .pagebody {
+    top: 100px;
+  }
+  .pagebody2 {
+    top: 250px;
+  }
+  .nowarning {
+    height: 60px;
+  }
+  .msgbox {
+    padding-right: 0px;
+    padding-top: 0px;
+  }
+  #hostspan {
+    text-align: center;
+  }
+
+}
+#footertext {
+  width: 100%;
+  background-color: #212121;
+  text-align: center;
+}
+p.form-title {
+  font-family: 'Open Sans' , sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5%;
+  text-transform: uppercase;
+}
+form.login input[type="text"],
+form.login input[type="password"] {
+  width: 100%;
+  margin: 0;
+  padding: 10px 10px;
+  background: 0;
+  border: 0;
+  border-bottom: 1px solid #FFFFFF;
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+  outline: 0;
+}
+form.login input[type="submit"] {
+  width: 60%;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: 0;
+  cursor: pointer;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 36px;
+}
+form.login input[type="submit"]:hover {
+  transition: background-color 0.5s ease;
+}
+form.login label,
+form.login a {
+  font-size: 12px;
+  font-weight: 400;
+}
+form.login a {
+  transition: color 0.5s ease;
+}
+.logoCol {
+  height: 100%;
+}
+#logodiv svg#logo {
+  width: 240px;
+  height: 100%;
+}
+@-webkit-keyframes autofill {
+  to {
+    color: white;
+    background: transparent;
+  }
+
+}
+input:-webkit-autofill {
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+:root {
+  color-scheme: dark;
+  --neon-blue: #00c8ff;
+  --neon-green: #63ff5b;
+  --neon-orange: #ff9638;
+}
+html {
+  min-height: 100%;
+}
+body {
+  color: var(--neon-ink);
+  font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+a {
+  color: var(--neon-blue);
+  transition: color .18s ease,text-shadow .18s ease,box-shadow .18s ease;
+}
+a:hover,
+a:focus {
+  color: var(--neon-green);
+  text-shadow: 0 0 9px rgba(99,255,91,.55);
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--neon-green);
+  outline-offset: 3px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend {
+  color: var(--neon-ink);
+}
+.text-muted,
+small.help-block,
+.help-block {
+  color: var(--neon-muted);
+}
+input,
+select,
+textarea,
+.form-control {
+  color: var(--neon-ink);
+  background-color: #0b1725;
+  border-color: var(--neon-line);
+}
+.form-control:focus {
+  color: var(--neon-ink);
+  background: #0b1725;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 0 3px rgba(0,200,255,.15);
+}
+input::placeholder,
+textarea::placeholder {
+  color: #90a8bc;
+  opacity: 1;
+}
+input[type=checkbox],
+input[type=radio] {
+  accent-color: var(--neon-green);
+}
+.btn {
+  border-radius: 5px;
+  transition: box-shadow .18s ease,background .18s ease,border-color .18s ease;
+}
+.btn-default {
+  color: var(--neon-ink);
+  background: #1b3045;
+  border-color: #466079;
+}
+.btn-primary,
+.btn-info {
+  color: #051521;
+  background: var(--neon-blue);
+  border-color: var(--neon-blue);
+  font-weight: 600;
+}
+.btn-success {
+  color: #0a200e;
+  background: var(--neon-green);
+  border-color: var(--neon-green);
+}
+.btn-warning,
+.btn-danger {
+  color: #291304;
+  background: var(--neon-orange);
+  border-color: var(--neon-orange);
+}
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0 14px rgba(0,200,255,.25);
+}
+.btn-default:hover,
+.btn-default:focus {
+  color: var(--neon-green);
+  background: #223c50;
+  border-color: var(--neon-green);
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-info:hover,
+.btn-info:focus {
+  color: #051521;
+  background: #65e0ff;
+  border-color: #65e0ff;
+}
+.btn-success:hover,
+.btn-success:focus {
+  color: #0a200e;
+  background: #96ff90;
+  border-color: #96ff90;
+  box-shadow: 0 0 15px rgba(99,255,91,.3);
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-danger:hover,
+.btn-danger:focus {
+  color: #291304;
+  background: #ffb573;
+  border-color: #ffb573;
+  box-shadow: 0 0 15px rgba(255,150,56,.3);
+}
+.btn-link {
+  color: var(--neon-blue);
+}
+.btn.disabled,
+.btn[disabled] {
+  opacity: .5;
+  box-shadow: none;
+}
+body .fa-wrench {
+  color: var(--neon-blue) !important;
+}
+body .fa-minus-circle {
+  color: var(--neon-green) !important;
+}
+body .fa-time-circle,
+body .fa-times-circle,
+body .fa-clock-o {
+  color: var(--neon-orange) !important;
+}
+body .fa-wrench,
+body .fa-minus-circle,
+body .fa-time-circle,
+body .fa-times-circle,
+body .fa-clock-o {
+  transition: text-shadow .18s ease;
+}
+body a:hover .fa,
+body button:hover .fa,
+body a:focus-visible .fa,
+body button:focus-visible .fa,
+body .fa-wrench:hover,
+body .fa-minus-circle:hover,
+body .fa-time-circle:hover,
+body .fa-times-circle:hover,
+body .fa-clock-o:hover {
+  text-shadow: 0 0 10px currentColor;
+}
+#topmenu .navbar-brand svg .logo-st0,
+#logodiv svg .logo-st0 {
+  fill: var(--neon-blue) !important;
+}
+#topmenu .navbar-brand svg .logo-st1,
+#logodiv svg .logo-st1 {
+  fill: var(--neon-green) !important;
+}
+#topmenu .navbar-brand svg .logo-st2,
+#logodiv svg .logo-st2 {
+  fill: var(--neon-orange) !important;
+}
+#topmenu .navbar-brand svg,
+#logodiv svg {
+  filter: drop-shadow(0 0 3px rgba(0,200,255,.3));
+}
+.theme-donate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 16px;
+  margin: 8px auto;
+  font-size: 12px;
+}
+.theme-donate a {
+  display: inline-block;
+  padding: 5px 12px;
+  border: 1px solid currentColor;
+  border-radius: 5px;
+}
+.theme-donate a:last-child {
+  color: var(--neon-orange);
+}
+.theme-donate a:hover,
+.theme-donate a:focus {
+  color: var(--neon-green);
+  box-shadow: 0 0 12px rgba(99,255,91,.22);
+}
+@media(prefers-reduced-motion:reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+
+}
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+#headerrow {
+  color: var(--neon-ink);
+  z-index: 10;
+}
+.pagebody,
+.pagebodywarn {
+  color: var(--neon-ink);
+  background: transparent;
+  bottom: 144px;
+  padding-bottom: 24px;
+  overflow: auto;
+}
+.loginCont {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  height: auto;
+  width: calc(100% - 32px);
+  max-width: 420px;
+  margin: clamp(28px,8vh,90px) auto 28px;
+  padding: 36px;
+  box-sizing: border-box;
+  border: 1px solid #34516a;
+  border-top: 3px solid var(--neon-blue);
+  border-radius: 12px;
+}
+form.login {
+  max-width: none;
+  margin: 0;
+}
+p.form-title {
+  color: var(--neon-ink);
+  margin: 0 0 24px;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+form.login label {
+  color: var(--neon-ink);
+}
+form.login input[type=text],
+form.login input[type=password] {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0 20px;
+  padding: 14px;
+  border: 1px solid #3b556c;
+  border-radius: 6px;
+  font: normal 16px "Segoe UI",Arial,sans-serif;
+  letter-spacing: normal;
+}
+form.login input:focus {
+  outline: 2px solid rgba(0,200,255,.3);
+  outline-offset: 2px;
+}
+form.login input[type=submit],
+form.login button[type=submit] {
+  width: 100%;
+  margin: 22px 0 0;
+  padding: 14px;
+  border: 1px solid var(--neon-blue);
+  border-radius: 6px;
+  color: #051521;
+  background: var(--neon-blue);
+  font: 600 15px "Segoe UI",Arial,sans-serif;
+  cursor: pointer;
+  transition: background .18s ease,box-shadow .18s ease;
+}
+form.login input[type=submit]:hover,
+form.login input[type=submit]:focus,
+form.login button[type=submit]:hover,
+form.login button[type=submit]:focus {
+  background: var(--neon-green);
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(99,255,91,.25);
+}
+form.login a {
+  color: var(--neon-blue);
+}
+form.login a:hover,
+form.login a:focus,
+.error-panel a:hover {
+  color: var(--neon-green);
+}
+#hostspan,
+.logoCol {
+  color: var(--neon-ink);
+}
+#logodiv svg#logo {
+  max-width: 100%;
+}
+#footertext {
+  position: fixed;
+  bottom: 0;
+  height: auto;
+  min-height: 52px;
+  margin-top: 20px;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  color: var(--neon-muted);
+  border-top: 1px solid rgba(0,200,255,.3);
+  line-height: 1.6;
+}
+#footertext .text-muted {
+  color: var(--neon-muted);
+}
+#footertext p {
+  margin: 0;
+}
+#footertext::after {
+  content: "Copyright © 2026 pfSense-Blue-Silver-Orange-Neon — Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.";
+  display: block;
+  padding-top: 6px;
+  font-size: 12px;
+}
+@-webkit-keyframes autofill {
+  to {
+    color: #e6f1fa;
+    background: #091726;
+  }
+
+}
+@media(max-width:480px) {
+  .pagebody,
+  .pagebodywarn {
+    bottom: 180px;
+  }
+  .loginCont {
+    padding: 24px;
+    margin-top: 28px;
+  }
+
+}
+#topmenu .navbar-brand svg,
+#topmenu .navbar-brand img,
+.navbar-brand svg,
+.navbar-brand img,
+#logodiv svg,
+#logodiv img {
+  transition: filter .22s ease;
+}
+#topmenu .navbar-brand:hover svg,
+#topmenu .navbar-brand:hover img,
+#topmenu .navbar-brand:focus-visible svg,
+#topmenu .navbar-brand:focus-visible img,
+.navbar-brand:hover svg,
+.navbar-brand:hover img,
+.navbar-brand:focus-visible svg,
+.navbar-brand:focus-visible img,
+#logodiv:hover svg,
+#logodiv:hover img,
+#logodiv a:focus-visible svg,
+#logodiv a:focus-visible img {
+  filter: brightness(1.18) drop-shadow(0 0 5px rgba(0,200,255,.65)) drop-shadow(0 0 9px rgba(99,255,91,.25));
+}
+@media(prefers-reduced-motion:reduce) {
+  .navbar-brand svg,
+  .navbar-brand img,
+  #topmenu .navbar-brand svg,
+  #topmenu .navbar-brand img,
+  #logodiv svg,
+  #logodiv img {
+    transition: none;
+  }
+
+}
+:root {
+  --neon-page: #132b40;
+  --neon-surface: #203e55;
+  --neon-line: #52758e;
+  --neon-ink: #f0f8ff;
+  --neon-muted: #c1d6e6;
+}
+#headerrow {
+  background: transparent;
+  border-bottom: 0;
+  box-shadow: none;
+}
+.loginCont {
+  background: linear-gradient(145deg,#2b5069,#203e55);
+  border-color: var(--neon-line);
+  border-top-color: var(--neon-blue);
+  box-shadow: 0 18px 48px rgba(0,0,0,.25),0 0 28px rgba(0,200,255,.09);
+}
+form.login input[type=text],
+form.login input[type=password] {
+  color: var(--neon-ink);
+  background: #19364b;
+  border-color: #64859d;
+}
+form.login input::placeholder {
+  color: #b8ccdc;
+}
+form.login input:focus {
+  border-color: var(--neon-blue);
+  outline-color: rgba(0,200,255,.4);
+  box-shadow: 0 0 16px rgba(0,200,255,.18);
+}
+form.login input:-webkit-autofill {
+  -webkit-text-fill-color: #f0f8ff;
+  box-shadow: 0 0 0 1000px #19364b inset;
+}
+@-webkit-keyframes autofill {
+  to {
+    color: #f0f8ff;
+    background: #19364b;
+  }
+
+}
+#footertext {
+  background: #1a344a;
+  border-top-color: rgba(0,200,255,.35);
+}
+.error-panel,
+.alert-danger {
+  color: #ffe0bd;
+  background: #59402a;
+  border: 1px solid var(--neon-orange);
+}
+.error-panel a {
+  color: #ffe0bd;
+  text-decoration: underline;
+}
+body {
+  background-color: var(--neon-page);
+  background-image: radial-gradient(ellipse at 10% 0%,rgba(0,200,255,.22),transparent 55%),
+    radial-gradient(ellipse at 100% 45%,rgba(99,255,91,.10),transparent 50%),
+    radial-gradient(ellipse at 65% 100%,rgba(255,150,56,.10),transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22960%22%20height%3D%22640%22%20viewBox%3D%220%200%20960%20640%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%221%22%3E%3Cg%20stroke%3D%22%2300c8ff%22%20opacity%3D%22.14%22%3E%3Cpath%20d%3D%22M0%2092h140l48%2048h170l56-56h180l52%2052h314M0%20360h100l60-60h160l80%2080h180l56-56h324M62%200v92m126%2048v100l-48%2048v352M414%2084V0m232%20136v120l80%2080v304M0%20560h260l72-72h180%22%2F%3E%3Crect%20x%3D%22414%22%20y%3D%22270%22%20width%3D%2288%22%20height%3D%2288%22%20rx%3D%2210%22%2F%3E%3Cpath%20d%3D%22M430%20270v-18m20%2018v-18m20%2018v-18m16%2018v-18M430%20358v18m20-18v18m20-18v18m16-18v18M414%20286h-18m18%2020h-18m18%2020h-18M502%20286h18m-18%2020h18m-18%2020h18%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2363ff5b%22%20opacity%3D%22.10%22%3E%3Cpath%20d%3D%22M960%20210H822l-48-48h-70M960%20510H820l-60-60H620M820%20510v130M358%20140v64l56%2056%22%2F%3E%3Ccircle%20cx%3D%22822%22%20cy%3D%22210%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22620%22%20cy%3D%22450%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%23ff9638%22%20opacity%3D%22.12%22%3E%3Cpath%20d%3D%22M0%20200h68l44-44M332%20488v90l62%2062M960%2054H840l-50%2050%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22156%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22790%22%20cy%3D%22104%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2300c8ff%22%20opacity%3D%22.20%22%3E%3Ccircle%20cx%3D%22140%22%20cy%3D%2292%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22646%22%20cy%3D%22136%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22300%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22726%22%20cy%3D%22336%22%20r%3D%223%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    linear-gradient(145deg,#193b53,#132b40);
+  background-size: 100% 100%,100% 100%,100% 100%,960px 640px,100% 100%;
+  background-position: center,center,center,center top,center;
+  background-repeat: no-repeat,no-repeat,no-repeat,repeat,no-repeat;
+  background-attachment: fixed;
+}
+@media print {
+  body {
+    background: #fff;
+  }
+
+}
+
+/* Bound the fixed footer to the space reserved by the scrollable form region. */
+#footertext { max-height:144px; overflow-y:auto; }
+@media (max-width:480px) { #footertext { max-height:180px; } }
+
+/* Exact WebGUI backdrop; clear stock login canvas fills that could obscure it. */
+html { min-height:100%; background-color:#132b40; }
+body {
+  background-color: var(--neon-page);
+  background-image: radial-gradient(ellipse at 10% 0%,rgba(0,200,255,.22),transparent 55%),
+    radial-gradient(ellipse at 100% 45%,rgba(99,255,91,.10),transparent 50%),
+    radial-gradient(ellipse at 65% 100%,rgba(255,150,56,.10),transparent 55%),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22960%22%20height%3D%22640%22%20viewBox%3D%220%200%20960%20640%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%221%22%3E%3Cg%20stroke%3D%22%2300c8ff%22%20opacity%3D%22.14%22%3E%3Cpath%20d%3D%22M0%2092h140l48%2048h170l56-56h180l52%2052h314M0%20360h100l60-60h160l80%2080h180l56-56h324M62%200v92m126%2048v100l-48%2048v352M414%2084V0m232%20136v120l80%2080v304M0%20560h260l72-72h180%22%2F%3E%3Crect%20x%3D%22414%22%20y%3D%22270%22%20width%3D%2288%22%20height%3D%2288%22%20rx%3D%2210%22%2F%3E%3Cpath%20d%3D%22M430%20270v-18m20%2018v-18m20%2018v-18m16%2018v-18M430%20358v18m20-18v18m20-18v18m16-18v18M414%20286h-18m18%2020h-18m18%2020h-18M502%20286h18m-18%2020h18m-18%2020h18%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2363ff5b%22%20opacity%3D%22.10%22%3E%3Cpath%20d%3D%22M960%20210H822l-48-48h-70M960%20510H820l-60-60H620M820%20510v130M358%20140v64l56%2056%22%2F%3E%3Ccircle%20cx%3D%22822%22%20cy%3D%22210%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22620%22%20cy%3D%22450%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%23ff9638%22%20opacity%3D%22.12%22%3E%3Cpath%20d%3D%22M0%20200h68l44-44M332%20488v90l62%2062M960%2054H840l-50%2050%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22156%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22790%22%20cy%3D%22104%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2300c8ff%22%20opacity%3D%22.20%22%3E%3Ccircle%20cx%3D%22140%22%20cy%3D%2292%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22646%22%20cy%3D%22136%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22300%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22726%22%20cy%3D%22336%22%20r%3D%223%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
+    linear-gradient(145deg,#193b53,#132b40);
+  background-size: 100% 100%,100% 100%,100% 100%,960px 640px,100% 100%;
+  background-position: center,center,center,center top,center;
+  background-repeat: no-repeat,no-repeat,no-repeat,repeat,no-repeat;
+  background-attachment: fixed;
+
+  min-height:100vh;
+}
+.pagebody,.pagebodywarn { background:transparent !important; }
