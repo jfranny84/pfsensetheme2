@@ -7,39 +7,13 @@
 
 /* Consolidated rules retain cascade order and responsive overrides. */
 @import url("/css/logo.css");
-body {
-  height: 100%;
-  padding: 0;
-}
-html {
-  height: 100%;
-  padding: 0;
-  margin: 0;
-}
-body {
-  width: 100%;
-}
-#headerrow {
-  position: fixed;
-  height: 90px;
-  top: 0;
-  width: 100%;
-  background-color: white;
-}
-.pagebody {
-  position: absolute;
-  top: 90px;
-  width: 100%;
-}
-.pagebodywarn {
-  position: absolute;
-  top: 140px;
-  width: 100%;
-}
-.nowarning {
-  height: 80px;
-  padding-top: 10px;
-}
+body {padding: 0;}
+html {padding: 0;margin: 0;}
+body {width: 100%;}
+#headerrow {width: 100%;background-color: white;}
+
+
+.nowarning {padding-top: 10px;}
 #hostspan {
   text-align: right;
 }
@@ -48,18 +22,10 @@ body {
   padding-top: 25px;
 }
 @media only screen and (max-width : 768px) {
-  #headerrow {
-    height: 100px;
-  }
-  .pagebody {
-    top: 100px;
-  }
-  .pagebody2 {
-    top: 250px;
-  }
-  .nowarning {
-    height: 60px;
-  }
+  #headerrow {}
+  
+  
+  .nowarning {}
   .msgbox {
     padding-right: 0px;
     padding-top: 0px;
@@ -69,13 +35,9 @@ body {
   }
 
 }
-#footertext {
-  width: 100%;
-  background-color: #212121;
-  text-align: center;
-}
+#footertext {width: 100%;background-color: #212121;text-align: center;}
 p.form-title {
-  font-family: 'Open Sans' , sans-serif;
+  font-family: "Open Sans" , sans-serif;
   font-weight: 500;
   text-align: center;
   margin-top: 5%;
@@ -120,13 +82,8 @@ form.login a {
 form.login a {
   transition: color 0.5s ease;
 }
-.logoCol {
-  height: 100%;
-}
-#logodiv svg#logo {
-  width: 240px;
-  height: 100%;
-}
+.logoCol {}
+#logodiv svg#logo {width: 240px;}
 @-webkit-keyframes autofill {
   to {
     color: white;
@@ -144,13 +101,8 @@ input:-webkit-autofill {
   --neon-green: #63ff5b;
   --neon-orange: #ff9638;
 }
-html {
-  min-height: 100%;
-}
-body {
-  color: var(--neon-ink);
-  font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif;
-}
+html {min-height: 100%;}
+body {color: var(--neon-ink);font-family: "Segoe UI","Helvetica Neue",Arial,sans-serif;}
 a {
   color: var(--neon-blue);
   transition: color .18s ease,text-shadow .18s ease,box-shadow .18s ease;
@@ -353,37 +305,10 @@ body .fa-clock-o:hover {
   }
 
 }
-body {
-  min-height: 100vh;
-  margin: 0;
-}
-#headerrow {
-  color: var(--neon-ink);
-  z-index: 10;
-}
-.pagebody,
-.pagebodywarn {
-  color: var(--neon-ink);
-  background: transparent;
-  bottom: 144px;
-  padding-bottom: 24px;
-  overflow: auto;
-}
-.loginCont {
-  position: relative;
-  top: auto;
-  left: auto;
-  transform: none;
-  height: auto;
-  width: calc(100% - 32px);
-  max-width: 420px;
-  margin: clamp(28px,8vh,90px) auto 28px;
-  padding: 36px;
-  box-sizing: border-box;
-  border: 1px solid #34516a;
-  border-top: 3px solid var(--neon-blue);
-  border-radius: 12px;
-}
+body {min-height: 100vh;margin: 0;}
+#headerrow {color: var(--neon-ink);z-index: 10;}
+
+.loginCont {max-width: 420px;padding: 36px;box-sizing: border-box;border: 1px solid #34516a;border-top: 3px solid var(--neon-blue);border-radius: 12px;}
 form.login {
   max-width: none;
   margin: 0;
@@ -445,33 +370,15 @@ form.login a:focus,
 .logoCol {
   color: var(--neon-ink);
 }
-#logodiv svg#logo {
-  max-width: 100%;
-}
-#footertext {
-  position: fixed;
-  bottom: 0;
-  height: auto;
-  min-height: 52px;
-  margin-top: 20px;
-  padding: 12px 16px;
-  box-sizing: border-box;
-  color: var(--neon-muted);
-  border-top: 1px solid rgba(0,200,255,.3);
-  line-height: 1.6;
-}
+#logodiv svg#logo {max-width: 100%;}
+#footertext {min-height: 52px;padding: 12px 16px;box-sizing: border-box;color: var(--neon-muted);border-top: 1px solid rgba(0,200,255,.3);line-height: 1.6;}
 #footertext .text-muted {
   color: var(--neon-muted);
 }
 #footertext p {
   margin: 0;
 }
-#footertext::after {
-  content: "Copyright © 2026 pfSense-Blue-Silver-Orange-Neon — Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.";
-  display: block;
-  padding-top: 6px;
-  font-size: 12px;
-}
+#footertext::after {content:"Copyright © 2026 pfSense-Blue-Silver-Orange-Neon\A Created By Josh Frandsen / RestoreMyPC.Net. All Rights Reserved.";display:block;margin:6px auto 0;padding-top:6px;font-size:12px;line-height:1.6;white-space:pre-line;overflow-wrap:anywhere;}
 @-webkit-keyframes autofill {
   to {
     color: #e6f1fa;
@@ -480,14 +387,8 @@ form.login a:focus,
 
 }
 @media(max-width:480px) {
-  .pagebody,
-  .pagebodywarn {
-    bottom: 180px;
-  }
-  .loginCont {
-    padding: 24px;
-    margin-top: 28px;
-  }
+  
+  .loginCont {padding: 24px;}
 
 }
 #topmenu .navbar-brand svg,
@@ -530,17 +431,8 @@ form.login a:focus,
   --neon-ink: #f0f8ff;
   --neon-muted: #c1d6e6;
 }
-#headerrow {
-  background: transparent;
-  border-bottom: 0;
-  box-shadow: none;
-}
-.loginCont {
-  background: linear-gradient(145deg,#2b5069,#203e55);
-  border-color: var(--neon-line);
-  border-top-color: var(--neon-blue);
-  box-shadow: 0 18px 48px rgba(0,0,0,.25),0 0 28px rgba(0,200,255,.09);
-}
+#headerrow {background: transparent;border-bottom: 0;box-shadow: none;}
+.loginCont {background: linear-gradient(145deg,#2b5069,#203e55);border-color: var(--neon-line);border-top-color: var(--neon-blue);box-shadow: 0 18px 48px rgba(0,0,0,.25),0 0 28px rgba(0,200,255,.09);}
 form.login input[type=text],
 form.login input[type=password] {
   color: var(--neon-ink);
@@ -566,10 +458,7 @@ form.login input:-webkit-autofill {
   }
 
 }
-#footertext {
-  background: #1a344a;
-  border-top-color: rgba(0,200,255,.35);
-}
+#footertext {background: #1a344a;border-top-color: rgba(0,200,255,.35);}
 .error-panel,
 .alert-danger {
   color: #ffe0bd;
@@ -580,43 +469,64 @@ form.login input:-webkit-autofill {
   color: #ffe0bd;
   text-decoration: underline;
 }
-body {
-  background-color: var(--neon-page);
-  background-image: radial-gradient(ellipse at 10% 0%,rgba(0,200,255,.22),transparent 55%),
+body {background-color: var(--neon-page);background-image: radial-gradient(ellipse at 10% 0%,rgba(0,200,255,.22),transparent 55%),
     radial-gradient(ellipse at 100% 45%,rgba(99,255,91,.10),transparent 50%),
     radial-gradient(ellipse at 65% 100%,rgba(255,150,56,.10),transparent 55%),
     url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22960%22%20height%3D%22640%22%20viewBox%3D%220%200%20960%20640%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%221%22%3E%3Cg%20stroke%3D%22%2300c8ff%22%20opacity%3D%22.14%22%3E%3Cpath%20d%3D%22M0%2092h140l48%2048h170l56-56h180l52%2052h314M0%20360h100l60-60h160l80%2080h180l56-56h324M62%200v92m126%2048v100l-48%2048v352M414%2084V0m232%20136v120l80%2080v304M0%20560h260l72-72h180%22%2F%3E%3Crect%20x%3D%22414%22%20y%3D%22270%22%20width%3D%2288%22%20height%3D%2288%22%20rx%3D%2210%22%2F%3E%3Cpath%20d%3D%22M430%20270v-18m20%2018v-18m20%2018v-18m16%2018v-18M430%20358v18m20-18v18m20-18v18m16-18v18M414%20286h-18m18%2020h-18m18%2020h-18M502%20286h18m-18%2020h18m-18%2020h18%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2363ff5b%22%20opacity%3D%22.10%22%3E%3Cpath%20d%3D%22M960%20210H822l-48-48h-70M960%20510H820l-60-60H620M820%20510v130M358%20140v64l56%2056%22%2F%3E%3Ccircle%20cx%3D%22822%22%20cy%3D%22210%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22620%22%20cy%3D%22450%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%23ff9638%22%20opacity%3D%22.12%22%3E%3Cpath%20d%3D%22M0%20200h68l44-44M332%20488v90l62%2062M960%2054H840l-50%2050%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22156%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22790%22%20cy%3D%22104%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2300c8ff%22%20opacity%3D%22.20%22%3E%3Ccircle%20cx%3D%22140%22%20cy%3D%2292%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22646%22%20cy%3D%22136%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22300%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22726%22%20cy%3D%22336%22%20r%3D%223%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
-    linear-gradient(145deg,#193b53,#132b40);
-  background-size: 100% 100%,100% 100%,100% 100%,960px 640px,100% 100%;
-  background-position: center,center,center,center top,center;
-  background-repeat: no-repeat,no-repeat,no-repeat,repeat,no-repeat;
-  background-attachment: fixed;
-}
+    linear-gradient(145deg,#193b53,#132b40);background-size: 100% 100%,100% 100%,100% 100%,960px 640px,100% 100%;background-position: center,center,center,center top,center;background-repeat: no-repeat,no-repeat,no-repeat,repeat,no-repeat;background-attachment: fixed;}
 @media print {
-  body {
-    background: #fff;
-  }
+  body {background: #fff;}
 
 }
 
-/* Bound the fixed footer to the space reserved by the scrollable form region. */
-#footertext { max-height:144px; overflow-y:auto; }
-@media (max-width:480px) { #footertext { max-height:180px; } }
+/* Footer now follows the form in the full-height wrapper. */
+#footertext {}
+@media (max-width:480px) { #footertext {} }
 
 /* Exact WebGUI backdrop; clear stock login canvas fills that could obscure it. */
-html { min-height:100%; background-color:#132b40; }
-body {
-  background-color: var(--neon-page);
-  background-image: radial-gradient(ellipse at 10% 0%,rgba(0,200,255,.22),transparent 55%),
+html {min-height:100%;background-color:#132b40;}
+body {background-color: var(--neon-page);background-image: radial-gradient(ellipse at 10% 0%,rgba(0,200,255,.22),transparent 55%),
     radial-gradient(ellipse at 100% 45%,rgba(99,255,91,.10),transparent 50%),
     radial-gradient(ellipse at 65% 100%,rgba(255,150,56,.10),transparent 55%),
     url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22960%22%20height%3D%22640%22%20viewBox%3D%220%200%20960%20640%22%3E%3Cg%20fill%3D%22none%22%20stroke-width%3D%221%22%3E%3Cg%20stroke%3D%22%2300c8ff%22%20opacity%3D%22.14%22%3E%3Cpath%20d%3D%22M0%2092h140l48%2048h170l56-56h180l52%2052h314M0%20360h100l60-60h160l80%2080h180l56-56h324M62%200v92m126%2048v100l-48%2048v352M414%2084V0m232%20136v120l80%2080v304M0%20560h260l72-72h180%22%2F%3E%3Crect%20x%3D%22414%22%20y%3D%22270%22%20width%3D%2288%22%20height%3D%2288%22%20rx%3D%2210%22%2F%3E%3Cpath%20d%3D%22M430%20270v-18m20%2018v-18m20%2018v-18m16%2018v-18M430%20358v18m20-18v18m20-18v18m16-18v18M414%20286h-18m18%2020h-18m18%2020h-18M502%20286h18m-18%2020h18m-18%2020h18%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%2363ff5b%22%20opacity%3D%22.10%22%3E%3Cpath%20d%3D%22M960%20210H822l-48-48h-70M960%20510H820l-60-60H620M820%20510v130M358%20140v64l56%2056%22%2F%3E%3Ccircle%20cx%3D%22822%22%20cy%3D%22210%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22620%22%20cy%3D%22450%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%23ff9638%22%20opacity%3D%22.12%22%3E%3Cpath%20d%3D%22M0%20200h68l44-44M332%20488v90l62%2062M960%2054H840l-50%2050%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22156%22%20r%3D%224%22%2F%3E%3Ccircle%20cx%3D%22790%22%20cy%3D%22104%22%20r%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3Cg%20fill%3D%22%2300c8ff%22%20opacity%3D%22.20%22%3E%3Ccircle%20cx%3D%22140%22%20cy%3D%2292%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22646%22%20cy%3D%22136%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22160%22%20cy%3D%22300%22%20r%3D%223%22%2F%3E%3Ccircle%20cx%3D%22726%22%20cy%3D%22336%22%20r%3D%223%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"),
-    linear-gradient(145deg,#193b53,#132b40);
-  background-size: 100% 100%,100% 100%,100% 100%,960px 640px,100% 100%;
-  background-position: center,center,center,center top,center;
-  background-repeat: no-repeat,no-repeat,no-repeat,repeat,no-repeat;
-  background-attachment: fixed;
+    linear-gradient(145deg,#193b53,#132b40);background-size: 100% 100%,100% 100%,100% 100%,960px 640px,100% 100%;background-position: center,center,center,center top,center;background-repeat: no-repeat,no-repeat,no-repeat,repeat,no-repeat;background-attachment: fixed;min-height:100vh;}
 
-  min-height:100vh;
+
+/* Correct pfSense login layout: header, centered form, bottom footer. */
+body { margin:0; min-height:100vh; }
+#total { display:flex; flex-direction:column; min-height:100vh; min-height:100svh; width:100%; }
+#total > header { flex:0 0 auto; }
+#headerrow { position:relative; height:auto; min-height:90px; }
+#headerrow > .row { margin-left:0; margin-right:0; }
+.nowarning { height:auto; min-height:80px; }
+#total > .pagebody, #total > .pagebodywarn, #total > .pagebody2 {
+  position:relative;
+  display:flex;
+  flex:1 0 auto;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  padding:32px 16px;
+  box-sizing:border-box;
+  color:var(--neon-ink);
+  background:transparent !important;
 }
-.pagebody,.pagebodywarn { background:transparent !important; }
+#total > .pagebody > [class*="col-"],
+#total > .pagebodywarn > [class*="col-"],
+#total > .pagebody2 > [class*="col-"] {
+  float:none; flex:0 0 auto; width:100%; max-width:none; height:auto; margin:0; padding:0;
+}
+#total > .pagebody > [class*="col-"]:empty,
+#total > .pagebodywarn > [class*="col-"]:empty,
+#total > .pagebody2 > [class*="col-"]:empty { display:none; }
+.loginCont { position:relative; width:100%; max-width:420px; height:auto; margin:0 auto; }
+.logoCol { height:auto; }
+#logodiv svg#logo { height:auto; }
+#total > footer { position:static; flex:0 0 auto; clear:both; width:100%; margin-top:auto; padding:0; }
+#footertext { position:static; height:auto; max-height:none; overflow:visible; margin-top:0; }
+#footertext p { line-height:1.6; }
+@media (max-width:768px) {
+  .nowarning { min-height:60px; }
+  #total > .pagebody, #total > .pagebodywarn, #total > .pagebody2 { padding:24px 16px; }
+}

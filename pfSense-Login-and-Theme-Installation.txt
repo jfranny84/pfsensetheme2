@@ -183,3 +183,10 @@ VERSION 2.3
 The login uses the exact WebGUI circuit backdrop and transparent content
 regions. Menu hover/focus/open states retain identical border widths and font
 weight. Desktop dropdowns overlay content instead of changing page height.
+
+LOGIN LAYOUT UPDATE
+Login form is centered inside the full-height #total wrapper. The original
+pfSense credit and your design copyright remain in the footer at the bottom
+of short pages and below the form on smaller screens. Removed fixed footer
+and absolute-positioned main content to prevent overlap. Neon styling and
+existing donation markup are preserved. Replace login.css and hard-refresh.
